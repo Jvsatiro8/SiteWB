@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    ox-shadow: 0 0 20px rgba(4, 39, 233, 0.7); /*sombra embaixo da mascara*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    position: relative;
+    z-index: 2; /* Garantir que o conteúdo esteja acima do vídeo */
+}
+
+/* Estilo da logo */
+.logo {
+    display: flex; /* Para alinhar o logo e o texto em linha */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.logo img {
+    width: auto; /* Definindo a largura da imagem da logo */
+    height: 120px; /* Definindo a altura da imagem da logo */
+    margin-right: 10px; /* Espaço à direita da imagem */
+    margin-left: 15px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Coloca o vídeo atrás dos textos e botões */
+    overflow: hidden;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 64, 175, 1);
+    clip-path: polygon(0 0, 47% 0, 43% 100%, 0% 100%);
+    z-index: 1;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+/* Garantir que os textos e botões estejam acima do vídeo */
+h1, p, button, .flex {
+    position: relative;
+    z-index: 3; /* Ficar acima do vídeo */
+}
+
+
+/* Estilos Gerais do Corpo da Página 2*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+main {
+    padding: 40px; /* Espaçamento interno do conteúdo principal */
+    
+}
+
+/* Estilos do Carrossel */
+.carousel {
+    position: relative; /* Necessário para posicionamento absoluto dos botões */
+    overflow: hidden; /* Oculta imagens que estão fora do contêiner */
+    width: 360px; /* Define uma largura fixa, ajustável conforme necessário */
+    height: 500px; /* Define uma altura igual à largura para formar um quadrado */
+    margin-left: 0; /* Alinha o carrossel à esquerda */
+    margin-right: auto; /* Margem direita automática */
+    border: 2px solid #ccc; /* Borda do carrossel */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.carousel-images {
+    display: flex; /* Exibe imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+    width: 360px;
+    height: 500px;
+}
+
+.carousel-images img {
+    width: 100%; /* Ajusta a largura das imagens para 100% do contêiner */
+    height: 100%; /* Ajusta a altura das imagens para 100% do contêiner */
+    object-fit: cover; /* Cobre a área do contêiner, cortando imagens se necessário */
+}
+
+.prev, .next {
+    position: absolute; /* Permite posicionar os botões */
+    top: 50%; /* Alinha verticalmente os botões */
+    transform: translateY(-50%); /* Centraliza verticalmente os botões */
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    padding: 10px; /* Espaçamento interno do botão */
+    border-radius: 50%; /* Botões arredondados */
+}
+
+.prev {
+    left: 10px; /* Posição do botão anterior */
+}
+
+.next {
+    right: 10px; /* Posição do botão seguinte */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Muda o fundo ao passar o mouse */
+}
+
+
